@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: nodejs-app-route
+spec:
+  to:
+    kind: Service
+    name: nodejs-app-service
+  port:
+    targetPort: 8080
